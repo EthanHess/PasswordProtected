@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Credential" representedClassName="Credential" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="domain" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Domain" inverseName="credentials" inverseEntity="Domain" syncable="YES"/>
+    </entity>
+    <entity name="Domain" representedClassName="Domain" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="credentials" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Credential" inverseName="domain" inverseEntity="Credential" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Domain" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Credential" positionX="-54" positionY="0" width="128" height="90"/>
+    </elements>
+</model>
